@@ -8,13 +8,13 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Сайт для гостиницы</title>
 </head>
 <body>
     <h1>Сайт для гостиницы</h1>
     <div>
-        Здравствуйте! Вы @ViewBag.VisitorNumber посетитель за сегодня!<br />
-        Сегодня на календаре: @ViewBag.DateAndTime
+        Добрый день! На этом сайте вы сможете забронировать себе номер в режиме онлайн.<br />
+        @Html.ActionLink("Перейти к форме регистрации", "Registration", "Home")
     </div>
 </body>
 </html>
