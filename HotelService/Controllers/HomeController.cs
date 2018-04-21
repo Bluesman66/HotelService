@@ -8,9 +8,9 @@ namespace HotelService.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        public ActionResult Index()
         {
-            return "Сайт для гостиницы";
+            return View();
         }
     }
 }
