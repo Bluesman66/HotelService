@@ -10,12 +10,14 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Registration</title>
+    <link rel="stylesheet" href="@Href("~/Content/Site.css")" type="text/css" />
 </head>
 <body>
-    <p>Пожалуйста, заполните все необходиые поля и нажмите на кнопку "Завершить регистрацию"</p>
+    <p>Пожалуйста, заполните все необходимые поля и нажмите на кнопку "Завершить регистрацию"</p>
     <div>
         @using (Html.BeginForm())
         {
+            @Html.ValidationSummary()
             <p>Ваша фамилия: @Html.TextBoxFor(x => x.Surname)</p>
             <p>Ваше имя: @Html.TextBoxFor(x => x.Name)</p>
             <p>Ваше отчество: @Html.TextBoxFor(x => x.MiddleName)</p>

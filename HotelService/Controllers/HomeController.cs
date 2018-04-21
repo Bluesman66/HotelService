@@ -24,7 +24,12 @@ namespace HotelService.Controllers
         [HttpPost]
         public ActionResult Registration(RegistrationForm model)
         {
-            return View("Success", model);
+            if (ModelState.IsValid)
+            {
+                return View("Success", model);
+            }
+            ViewBag.Rooms = RoomRepository.GetRooms();
+            return View(model);
         }
     }
 }
