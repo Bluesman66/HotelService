@@ -12,7 +12,17 @@
     <title>Registration</title>
 </head>
 <body>
-    <div> 
+    <p>Пожалуйста, заполните все необходиые поля и нажмите на кнопку "Завершить регистрацию"</p>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <p>Ваша фамилия: @Html.TextBoxFor(x => x.Surname)</p>
+            <p>Ваше имя: @Html.TextBoxFor(x => x.Name)</p>
+            <p>Ваше отчество: @Html.TextBoxFor(x => x.MiddleName)</p>
+            <p>Ваш телефон: @Html.TextBoxFor(x => x.Phone)</p>
+            <p>Выберите комнату: @Html.DropDownListFor(x => x.SelectedRoom.Name, new SelectList(ViewBag.Rooms, "Name", "Name"))</p>
+            <input type="submit" value="Завершить регистрацию" />
+        }
     </div>
 </body>
 </html>

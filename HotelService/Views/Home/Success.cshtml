@@ -1,0 +1,20 @@
+﻿@model HotelService.Models.RegistrationForm
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Отлично!</title>
+</head>
+<body>
+    <div>
+        Уважаемый @Model.Name! Вы успешно забронировали себе номер в отеле!<br />
+        Вы выбрали номер: @Model.SelectedRoom.Name
+    </div>
+</body>
+</html>
